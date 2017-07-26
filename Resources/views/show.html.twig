@@ -11,8 +11,7 @@
     $(document).on('change', '#form-filter-{{ widget.id }} input, #form-filter-{{ widget.id }} select', function(e) {
         var form = $(this).parents('form');
         {% if ajax %}
-        $('#canvasloader-container').fadeIn();
-        $('#canvasloader-container--overlay').fadeIn();
+        $wrapper.fadeIn();
         var update = 'widget-{{widget.listing.id}}-container';
         var formData = '';
         $('form[data-widget-listing="{{widget.listing.id}}"]').each(function(index, elem){
